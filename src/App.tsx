@@ -1,4 +1,4 @@
-import CoffeeList from './Components/CoffeeList';
+import CoffeeSection from './Components/CoffeeSection';
 import Header from './Components/Header';
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <>
       <div className="relative min-h-screen  bg-[#111315]">
         <Header />
-        <CoffeeList />
+        <CoffeeSection />
       </div>
     </>
   );
