@@ -1,8 +1,9 @@
 import React from 'react';
 import CoffeeCard from './CoffeeCard';
 import type { fetchCoffees } from '../types/type';
+import type { CoffeListProps } from '../types/type';
 
-const CoffeeList = () => {
+const CoffeeList = ({filter}: CoffeListProps) => {
   const [coffees, setCoffees] = React.useState<fetchCoffees[] | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -34,10 +35,11 @@ const CoffeeList = () => {
   if (error) {
     return <div className="text-center text-[#FEF7EE] text-2xl">{error}</div>;
   }
+  const filteredCoffees = coffees?.filter((coffee) => filter === "all" ? true : coffee.available);
   return (
     <div className="grid grid-cols-3 px-80">
       {coffees &&
-        coffees.map((coffee) => <CoffeeCard key={coffee.id} {...coffee} />)}
+        filteredCoffees?.map((coffee) => <CoffeeCard key={coffee.id} {...coffee} />)}
     </div>
   );
 };

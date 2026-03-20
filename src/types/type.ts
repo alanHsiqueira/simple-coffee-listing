@@ -8,3 +8,8 @@ export type fetchCoffees = {
   popular: boolean;
   available: boolean;
 } 
+
+
+export type CoffeListProps = { 
+  filter: "all" | "available";
+}
