@@ -1,10 +1,9 @@
-import React from 'react';
 import Button from './Button';
 import CoffeeList from './CoffeeList';
 
 const CoffeeSection = () => {
   return (
-    <div className="relative mx-auto -mt-60 bg-[#111315] w-[85%] rounded-2xl px-10 py-8">
+    <div className="relative mx-auto -mt-[340px] bg-[#1B1D1F] w-[85%] rounded-2xl px-10 py-12">
       <h1 className="text-[#FEF7EE] text-3xl text-center mb-3 font-bold">
         Our Colection
       </h1>
@@ -13,7 +12,7 @@ const CoffeeSection = () => {
         from diferent roast types and origins, expertily roasted in small <br />{' '}
         batches and shipped fresh weekly
       </p>
-      <div className='flex justify-center gap-1 mt-3'>
+      <div className='flex justify-center gap-2 mt-3'>
         <Button>All products</Button>
         <Button>Available Now</Button>
       </div>
