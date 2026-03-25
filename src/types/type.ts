@@ -1,4 +1,4 @@
-export type fetchCoffees = {
+export type FetchCoffees = {
   id: number;
   name: string;
   image: string;

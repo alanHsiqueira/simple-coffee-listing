@@ -4,7 +4,7 @@ import Header from './Components/Header';
 function App() {
   return (
     <>
-      <div className="relative min-h-screen  bg-[#111315]">
+      <div className="relative min-h-screen  bg-[#111315] pb-20">
         <Header />
         <CoffeeSection />
       </div>

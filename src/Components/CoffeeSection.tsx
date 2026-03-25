@@ -1,25 +1,38 @@
 import Button from './Button';
 import CoffeeList from './CoffeeList';
 import React from 'react';
+import vector from '../assets/vector.svg';
 
 const CoffeeSection = () => {
-  const [filter, setFilter] = React.useState<"all" | "available">("all");
+  const [filter, setFilter] = React.useState<'all' | 'available'>('all');
 
   return (
-    <div className="relative mx-auto -mt-[340px] bg-[#1B1D1F] w-[85%] rounded-2xl px-10 py-12">
-      <h1 className="text-[#FEF7EE] text-3xl text-center mb-3 font-bold">
-        Our Colection
-      </h1>
-      <p className="text-[#6F757C] text-center text-base">
-        Introducing our Cooffe Collection, a selection of unique coffees <br />{' '}
-        from diferent roast types and origins, expertily roasted in small <br />{' '}
-        batches and shipped fresh weekly
-      </p>
-      <div className='flex justify-center gap-2 mt-4'>
-        <Button active={filter ==="all"} onClick={() => setFilter("all")}>All products</Button>
-        <Button active={filter === "available"} onClick={() => setFilter("available")}>Available Now</Button>
+    <div className="relative mx-auto -mt-20 lg:-mt-60 bg-[#1B1D1F] w-[90%] max-w-300 rounded-2xl px-5 lg:px-10 py-12 lg:py-20 overflow-hidden">
+      <div className="absolute top-4 right-[5%] md:right-[20%] lg:right-[30%] pointer-events-none">
+        <img src={vector} alt="" />
       </div>
-      <CoffeeList filter={filter} /> 
+      <div className="relative z-10 flex flex-col items-center">
+        <h1 className="text-[#FEF7EE] text-2xl lg:text-4xl text-center mb-4 font-bold">
+          Our Collection
+        </h1>
+        <p className="text-[#6F757C] text-center text-sm lg:text-base max-w-125">
+          Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.
+        </p>
+      </div>
+
+      <div className="relative z-10 flex justify-center gap-2 mt-8 
+      md:mb-4">
+        <Button active={filter === 'all'} onClick={() => setFilter('all')}>
+          All products
+        </Button>
+        <Button
+          active={filter === 'available'}
+          onClick={() => setFilter('available')}
+        >
+          Available Now
+        </Button>
+      </div>
+      <CoffeeList filter={filter} />
     </div>
   );
 };
