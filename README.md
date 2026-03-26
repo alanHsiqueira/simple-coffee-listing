@@ -29,3 +29,8 @@ npm run dev
 ## Autor
 
 Alan
+
+## Créditos
+
+Desafio proposto por [DevChallenges](https://devchallenges.io/).  
+Design e API fornecidos pela plataforma.
